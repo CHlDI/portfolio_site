@@ -674,7 +674,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 64px 80px 28vh;  /* bottom = フッター最大高さ分の余白 */
+  padding: 64px 80px 20vh;  /* bottom = フッター最大高さ分の余白 */
   overflow: hidden;
 }
 .lb-stage img {
@@ -695,7 +695,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   align-items: center;
   gap: 12px;
   background: rgba(12,9,18,.96);
-  max-height: 28vh;
+  max-height: 20vh;
   overflow: hidden;
 }
 
@@ -752,7 +752,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   text-align: center;
   max-width: 560px;
   padding: 0 1rem;
-  max-height: 12vh;
+  max-height: 7vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,.2) transparent;
@@ -972,7 +972,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   .about-portrait-area { order: -1; max-width: 220px; }
   .proj-cards { grid-template-columns: repeat(2, 1fr); }
   .gal-inner { padding: 72px 32px 64px; }
-  .lb-stage { padding: 56px 52px 28vh; }
+  .lb-stage { padding: 56px 52px 20vh; }
   .lb-footer { padding: 10px 52px 20px; }
 }
 
@@ -985,7 +985,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   .gal-inner { padding: 64px 20px 48px; }
   .gal-grid { grid-template-columns: 1fr; }
   .gal-grid--portrait { grid-template-columns: repeat(3, 1fr); }
-  .lb-stage { padding: 56px 16px 28vh; }
+  .lb-stage { padding: 56px 16px 20vh; }
   .lb-footer { padding: 8px 16px 16px; }
   .lb-prev { left: 8px; }
   .lb-next { right: 8px; }
