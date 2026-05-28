@@ -632,10 +632,8 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   position: fixed; inset: 0;
   z-index: 200;
   background: rgba(12,9,18,.96);
-  flex-direction: column;
-  align-items: center;
 }
-.lb.open { display: flex; }
+.lb.open { display: block; }
 
 /* 閉じるボタン */
 .lb-x {
@@ -669,14 +667,14 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
 .lb-prev { left: 18px; }
 .lb-next { right: 18px; }
 
-/* メイン画像エリア */
+/* メイン画像エリア：絶対配置で常に同サイズをキープ */
 .lb-stage {
-  flex: 1;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 64px 80px 16px;
+  padding: 64px 80px 28vh;  /* bottom = フッター最大高さ分の余白 */
   overflow: hidden;
 }
 .lb-stage img {
@@ -687,14 +685,18 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   box-shadow: 0 16px 80px rgba(0,0,0,.7);
 }
 
-/* フッター（サムネイル + キャプション） */
+/* フッター：画面下に固定、最大28vhまで */
 .lb-footer {
-  width: 100%;
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
   padding: 12px 80px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  background: rgba(12,9,18,.96);
+  max-height: 28vh;
+  overflow: hidden;
 }
 
 /* サムネイルストリップ */
@@ -750,7 +752,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   text-align: center;
   max-width: 560px;
   padding: 0 1rem;
-  max-height: 22vh;
+  max-height: 12vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,.2) transparent;
@@ -970,7 +972,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   .about-portrait-area { order: -1; max-width: 220px; }
   .proj-cards { grid-template-columns: repeat(2, 1fr); }
   .gal-inner { padding: 72px 32px 64px; }
-  .lb-stage { padding: 56px 52px 12px; }
+  .lb-stage { padding: 56px 52px 28vh; }
   .lb-footer { padding: 10px 52px 20px; }
 }
 
@@ -983,7 +985,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   .gal-inner { padding: 64px 20px 48px; }
   .gal-grid { grid-template-columns: 1fr; }
   .gal-grid--portrait { grid-template-columns: repeat(3, 1fr); }
-  .lb-stage { padding: 56px 16px 12px; }
+  .lb-stage { padding: 56px 16px 28vh; }
   .lb-footer { padding: 8px 16px 16px; }
   .lb-prev { left: 8px; }
   .lb-next { right: 8px; }
