@@ -400,7 +400,7 @@
         { src: 'images/thumb-kikaku-screenrec.jpg', video: 'videos/kikaku-screenrec.mp4', alt: 'rebbirthday 参加者発表動画', note: '2025年12月 · 約20時間 / ibisPaint X · After Effects', caption: '世界観に沿った演出や、動くカラーイラストを使用することでワクワクする結果発表を目指しました。' },
         { src: 'images/thumb-kikaku-bo.jpg',   video: 'videos/kikaku-bo.mp4',   muted: true, alt: 'rebbirthday 宣伝動画', note: '2025年10月 · 約4時間 / ibisPaint X · After Effects', caption: '' },
         { src: 'images/thumb-kikaku-senden.jpg', video: 'videos/kikaku-senden.mp4', muted: true, alt: 'rebbirthday 宣伝動画', note: '2025年11月 · 約10時間 / ibisPaint X · After Effects', caption: '' },
-        { src: 'images/95.png',  alt: 'rebbirthday 告知イラスト', note: '2025年9月 · 1時間30分 / ibisPaint X', caption: '告知イラスト。' },
+        { src: 'images/95.png',  alt: 'rebbirthday 告知イラスト', note: '2025年9月 · 1時間30分 / ibisPaint X', caption: '「夏ですから、雪でも降らせましょう。」そう言って、先生は久しぶりに校庭を真っ白にした。\n\nどちらかというまでもなく、雪は冬だろう。夏は暑いから涼もうというニュアンスにしたって、今となってはもはや気の持ちようでしかない。\n\n1階の教室の埃みたいに落ちてくる白い欠片をしばらく眺めていた先生は、やがて端っこで丸まっていた私に目を向けて、雪だるまでも作ろうと言い出した。\n\n私は手を貸さないまま、7個の雪だるまが周りに並べられた。\n\n彼らの特徴が捉えられた器用なそれの中に、先生はいなかった\n\n先生は、一つ増えた雪だるまに気づいてたかな' },
         { src: 'images/kikaku-4201.png', alt: 'rebbirthday 告知イラスト', note: '2025年10月 · 2時間10分 / ibisPaint X', caption: '' },
         { src: 'images/185.png', alt: 'rebbirthday 告知イラスト', note: '2025年11月 · 2時間52分 / ibisPaint X', caption: '' },
         { src: 'images/178.png', alt: 'rebbirthday 告知イラスト', note: '2025年11月 · 2時間52分 / ibisPaint X', caption: '' },
@@ -877,7 +877,7 @@
 
     lbCap.textContent = `${img.alt}　${img.note}`;
     const lbDetail = document.getElementById('lbDetail');
-    lbDetail.textContent  = img.caption || '';
+    lbDetail.innerHTML = (img.caption || '').replace(/\n/g, '<br>');
     lbDetail.style.display = img.caption ? '' : 'none';
 
     // サムネイルストリップ
