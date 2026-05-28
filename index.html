@@ -405,6 +405,12 @@
         { src: 'images/147.png', alt: 'rebbirthday 告知イラスト', note: '2025年11月 · 55分 / ibisPaint X', caption: 'この世界では、学校を卒業する生徒に花束を渡します。主催キャラのうち1人がまもなく卒業するため、そのための花束を作る場面です。' },
         { src: 'images/150.png', alt: 'rebbirthday 誕生日イラスト', note: '2026年4月 · 約2時間 / ibisPaint X', caption: 'キャラクターの誕生日のお祝いイラストです。' },
         { src: 'images/157.png', alt: 'rebbirthday 告知イラスト', note: '2025年 · 42分 / ibisPaint X', caption: 'グロテスクな世界を優しい嘘で隠している世界観を表現しています。' },
+        { src: 'images/thumb-kikaku-risu.jpg', video: 'videos/kikaku-risu.mp4', muted: true, alt: 'rebbirthday 動画', note: '/ ibisPaint X', caption: '' },
+        { src: 'images/thumb-kikaku-bo.jpg',   video: 'videos/kikaku-bo.mp4',   muted: true, alt: 'rebbirthday 動画', note: '/ ibisPaint X', caption: '' },
+        { src: 'images/thumb-kikaku-senden.jpg', video: 'videos/kikaku-senden.mp4', muted: true, alt: 'rebbirthday 告知動画', note: '/ ibisPaint X', caption: '' },
+        { src: 'images/kikaku-4201.png', alt: 'rebbirthday 作品', note: '/ ibisPaint X', caption: '' },
+        { src: 'images/kikaku-3915.png', alt: 'rebbirthday 作品', note: '/ ibisPaint X', caption: '' },
+        { src: 'images/kikaku-4339.png', alt: 'rebbirthday 作品', note: '/ ibisPaint X', caption: '' },
         { src: 'images/187.png', gallery: ['images/187.png', 'images/188.png', 'images/189.png', 'images/190.png', 'images/191.png', 'images/192.png', 'images/193.png'], alt: '証明写真風イラスト', note: '2025年10月 · 約7時間 / ibisPaint X', caption: '証明写真風イラスト集。全7点。' },
         { src: 'images/160.png', gallery: ['images/148.png', 'images/160.png', 'images/161.png', 'images/163.png', 'images/164.png', 'images/165.png', 'images/168.png', 'images/169.png', 'images/170.png', 'images/171.png', 'images/172.png', 'images/173.png', 'images/174.png', 'images/175.png', 'images/176.png', 'images/177.png', 'images/178.png', 'images/179.png', 'images/180.png', 'images/181.png', 'images/182.png', 'images/184.png', 'images/185.png', 'images/194.png', 'images/203.jpg'], alt: '応募特典 お礼イラスト', note: '2025年10月 · 1枚あたり約2時間 / ibisPaint X', caption: '参加者へのお礼として制作したキャラクターイラスト集。全25点。' },
       ]
@@ -853,6 +859,7 @@
       lbVid.style.display = '';
       stopLbVideo();
       lbVid.src    = img.video;
+      lbVid.muted  = !!img.muted;
       lbVid.poster = img.src || '';
       lbVid.load();
       lbVid.play().catch(() => {});
