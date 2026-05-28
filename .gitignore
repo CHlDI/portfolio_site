@@ -1,7 +1,3 @@
-# 100MB超えの動画（GitHub制限）
-videos/neko-escape.mp4
-videos/gogo-imomushikun.mp4
-
 # バックアップ・開発ファイル
 *.bak
 *.py
