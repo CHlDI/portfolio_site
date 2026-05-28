@@ -879,6 +879,7 @@
     const lbDetail = document.getElementById('lbDetail');
     lbDetail.innerHTML = (img.caption || '').replace(/\n/g, '<br>');
     lbDetail.style.display = img.caption ? '' : 'none';
+    lbDetail.scrollTop = 0;
 
     // サムネイルストリップ
     lbThumbs.innerHTML = '';
