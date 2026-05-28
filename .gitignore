@@ -1,0 +1,15 @@
+# 100MB超えの動画（GitHub制限）
+videos/neko-escape.mp4
+videos/gogo-imomushikun.mp4
+
+# バックアップ・開発ファイル
+*.bak
+*.py
+images_backup_original/
+mapping.json
+lbpcascade_animeface.xml
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
