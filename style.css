@@ -508,21 +508,48 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
 /* ── Instagram CTA ボタン ───────────────────── */
 .gal-cta-btn {
   display: block;
-  margin: 20px auto 4px;
-  padding: 12px 32px;
+  margin: 20px auto 8px;
+  padding: 9px 22px;
   width: fit-content;
-  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  color: #fff;
-  font-size: .9rem;
-  font-weight: 600;
-  letter-spacing: .04em;
-  border-radius: 30px;
+  background: transparent;
+  color: var(--muted);
+  font-size: .8rem;
+  letter-spacing: .03em;
+  border: 1px solid var(--border);
+  border-radius: 20px;
   text-decoration: none;
-  transition: opacity .2s, transform .2s;
+  transition: color .2s, border-color .2s;
 }
 .gal-cta-btn:hover {
-  opacity: .85;
-  transform: translateY(-2px);
+  color: var(--fg);
+  border-color: var(--fg);
+}
+
+/* ── Instagram 確認モーダル ─────────────────── */
+.ig-confirm {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.55); z-index: 2000;
+  align-items: center; justify-content: center;
+}
+.ig-confirm.open { display: flex; }
+.ig-confirm-box {
+  background: #fff; border-radius: 12px;
+  padding: 32px 28px; max-width: 300px; width: 88%;
+  text-align: center;
+}
+.ig-confirm-msg {
+  font-size: .9rem; color: #333; margin-bottom: 22px; line-height: 1.6;
+}
+.ig-confirm-go {
+  display: block; background: #111; color: #fff;
+  padding: 11px 20px; border-radius: 6px;
+  text-decoration: none; font-size: .88rem; margin-bottom: 10px;
+  transition: opacity .2s;
+}
+.ig-confirm-go:hover { opacity: .8; }
+.ig-confirm-cancel {
+  background: none; border: none; color: #999;
+  font-size: .82rem; cursor: pointer; padding: 6px 12px;
 }
 
 /* ── Sub-Gallery ────────────────────────────── */

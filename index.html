@@ -304,6 +304,15 @@
     <div class="subgal-grid" id="subgalGrid"></div>
   </div>
 
+  <!-- INSTAGRAM CONFIRM MODAL -->
+  <div id="ig-confirm" class="ig-confirm">
+    <div class="ig-confirm-box">
+      <p class="ig-confirm-msg">この動画はInstagramで公開されています</p>
+      <a id="ig-confirm-link" href="" target="_blank" rel="noopener noreferrer" class="ig-confirm-go">Instagramで見る →</a>
+      <button id="ig-confirm-cancel" class="ig-confirm-cancel">キャンセル</button>
+    </div>
+  </div>
+
   <!-- SUB-GALLERY LIGHTBOX -->
   <div class="subgal-lb" id="subgalLb">
     <button class="subgal-lb-x"    id="subgalLbX"    aria-label="閉じる">✕</button>
@@ -784,7 +793,9 @@
 
       fig.addEventListener('click', () => {
         const entry = PROJECTS[pi].images[ii];
+        const proj  = PROJECTS[pi];
         if (entry.gallery) { openSubGal(entry); }
+        else if (!entry.video && proj.cta) { openIgConfirm(proj.cta.url); }
         else { openLb(pi, ii); }
       });
       galGrid.appendChild(fig);
@@ -1000,6 +1011,20 @@
     const subgalLbImg   = document.getElementById('subgalLbImg');
     const subgalLbCnt   = document.getElementById('subgalLbCounter');
     const subgalLbCap   = document.getElementById('subgalLbCaption');
+
+    // Instagram 確認モーダル
+    const igConfirm = document.getElementById('ig-confirm');
+    const igConfirmLink = document.getElementById('ig-confirm-link');
+    window.openIgConfirm = function(url) {
+      igConfirmLink.href = url;
+      igConfirm.classList.add('open');
+    };
+    document.getElementById('ig-confirm-cancel').addEventListener('click', () => {
+      igConfirm.classList.remove('open');
+    });
+    igConfirm.addEventListener('click', e => {
+      if (e.target === igConfirm) igConfirm.classList.remove('open');
+    });
 
     let sgImages = [], sgIdx = 0;
 
