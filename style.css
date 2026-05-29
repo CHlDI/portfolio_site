@@ -200,9 +200,8 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
 /* プロフィール写真エリア */
 .portrait-img {
   width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  object-position: center;
+  aspect-ratio: 1/1;
+  object-fit: contain;
   border-radius: 4px;
   display: block;
 }
