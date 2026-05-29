@@ -942,6 +942,41 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   position: absolute;
   left: 0;
 }
+
+/* ネーミングのこだわり */
+.approach-naming { margin-bottom: 72px; }
+.naming-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 760px;
+  display: grid;
+  gap: 16px;
+}
+.naming-item {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 16px rgba(0,0,0,.05);
+  padding: 20px 24px;
+}
+.naming-name {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.naming-yomi {
+  font-size: .72rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 12px;
+  letter-spacing: .05em;
+}
+.naming-desc {
+  font-size: .82rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
 .approach-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
