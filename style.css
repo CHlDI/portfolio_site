@@ -249,10 +249,9 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
 }
 .lt-name { font-size: .8rem; color: var(--fg); }
 .lt-time {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-size: .85rem;
+  font-weight: 500;
   color: var(--fg);
-  letter-spacing: .02em;
 }
 .leadtime-note {
   font-size: .62rem;
