@@ -508,21 +508,22 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
 /* ── Instagram CTA ボタン ───────────────────── */
 .gal-cta-btn {
   display: block;
-  margin: 20px auto 8px;
-  padding: 9px 22px;
+  margin: 24px auto 6px;
+  padding: 11px 28px;
   width: fit-content;
-  background: transparent;
-  color: var(--muted);
-  font-size: .8rem;
-  letter-spacing: .03em;
-  border: 1px solid var(--border);
-  border-radius: 20px;
+  background: #f7f4fa;
+  color: #555;
+  font-size: .86rem;
+  letter-spacing: .02em;
+  border: 1.5px solid #d8cfe8;
+  border-radius: 8px;
   text-decoration: none;
-  transition: color .2s, border-color .2s;
+  transition: background .2s, color .2s, border-color .2s;
 }
 .gal-cta-btn:hover {
-  color: var(--fg);
-  border-color: var(--fg);
+  background: #ede7f6;
+  color: #222;
+  border-color: #b8a8d4;
 }
 
 /* ── Instagram 確認モーダル ─────────────────── */
