@@ -150,45 +150,79 @@
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- レーダーチャート -->
-    <div class="radar-wrap">
-      <h3 class="approach-sub">私のステータス</h3>
-      <div class="radar-container">
-        <svg class="radar-svg" id="radarSvg" viewBox="-148 -132 296 268" xmlns="http://www.w3.org/2000/svg" aria-label="スキルレーダーチャート">
-          <!-- グリッドリング -->
-          <polygon class="radar-grid" points="0,-25 23.78,-7.73 14.69,20.23 -14.69,20.23 -23.78,-7.73"/>
-          <polygon class="radar-grid" points="0,-50 47.55,-15.45 29.39,40.45 -29.39,40.45 -47.55,-15.45"/>
-          <polygon class="radar-grid" points="0,-75 71.33,-23.18 44.08,60.68 -44.08,60.68 -71.33,-23.18"/>
-          <polygon class="radar-grid radar-grid--outer" points="0,-100 95.11,-30.90 58.78,80.90 -58.78,80.90 -95.11,-30.90"/>
-          <!-- 軸線 -->
-          <line class="radar-axis" x1="0" y1="0" x2="0" y2="-100"/>
-          <line class="radar-axis" x1="0" y1="0" x2="95.11" y2="-30.90"/>
-          <line class="radar-axis" x1="0" y1="0" x2="58.78" y2="80.90"/>
-          <line class="radar-axis" x1="0" y1="0" x2="-58.78" y2="80.90"/>
-          <line class="radar-axis" x1="0" y1="0" x2="-95.11" y2="-30.90"/>
-          <!-- グラデーション定義 -->
-          <defs>
-            <linearGradient id="radarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#b86070"/>
-              <stop offset="100%" stop-color="#8a6baa"/>
-            </linearGradient>
-          </defs>
-          <!-- 塗り多角形（JSで更新） -->
-          <polygon class="radar-fill" id="radarFill" points="0,0 0,0 0,0 0,0 0,0"/>
-          <!-- 頂点ドット -->
-          <circle class="radar-dot" id="dot0" cx="0" cy="0" r="5"/>
-          <circle class="radar-dot" id="dot1" cx="0" cy="0" r="5"/>
-          <circle class="radar-dot" id="dot2" cx="0" cy="0" r="5"/>
-          <circle class="radar-dot" id="dot3" cx="0" cy="0" r="5"/>
-          <circle class="radar-dot" id="dot4" cx="0" cy="0" r="5"/>
-          <!-- 軸ラベル -->
-          <text class="radar-label" x="0" y="-115" text-anchor="middle">企画遂行力</text>
-          <text class="radar-label" x="110" y="-33" text-anchor="start">挑戦心</text>
-          <text class="radar-label" x="72" y="103" text-anchor="middle">リスペクト</text>
-          <text class="radar-label" x="-72" y="103" text-anchor="middle">発想力</text>
-          <text class="radar-label" x="-110" y="-33" text-anchor="end">計画性</text>
-        </svg>
+  <!-- STRENGTHS（私のステータス＋こだわり5要素） -->
+  <section class="strengths" id="strengths">
+    <div class="strengths-wrap">
+      <!-- レーダーチャート -->
+      <div class="radar-wrap">
+        <h3 class="approach-sub">私のステータス</h3>
+        <div class="radar-container">
+          <svg class="radar-svg" id="radarSvg" viewBox="-148 -132 296 268" xmlns="http://www.w3.org/2000/svg" aria-label="スキルレーダーチャート">
+            <!-- グリッドリング -->
+            <polygon class="radar-grid" points="0,-25 23.78,-7.73 14.69,20.23 -14.69,20.23 -23.78,-7.73"/>
+            <polygon class="radar-grid" points="0,-50 47.55,-15.45 29.39,40.45 -29.39,40.45 -47.55,-15.45"/>
+            <polygon class="radar-grid" points="0,-75 71.33,-23.18 44.08,60.68 -44.08,60.68 -71.33,-23.18"/>
+            <polygon class="radar-grid radar-grid--outer" points="0,-100 95.11,-30.90 58.78,80.90 -58.78,80.90 -95.11,-30.90"/>
+            <!-- 軸線 -->
+            <line class="radar-axis" x1="0" y1="0" x2="0" y2="-100"/>
+            <line class="radar-axis" x1="0" y1="0" x2="95.11" y2="-30.90"/>
+            <line class="radar-axis" x1="0" y1="0" x2="58.78" y2="80.90"/>
+            <line class="radar-axis" x1="0" y1="0" x2="-58.78" y2="80.90"/>
+            <line class="radar-axis" x1="0" y1="0" x2="-95.11" y2="-30.90"/>
+            <!-- グラデーション定義 -->
+            <defs>
+              <linearGradient id="radarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#b86070"/>
+                <stop offset="100%" stop-color="#8a6baa"/>
+              </linearGradient>
+            </defs>
+            <!-- 塗り多角形（JSで更新） -->
+            <polygon class="radar-fill" id="radarFill" points="0,0 0,0 0,0 0,0 0,0"/>
+            <!-- 頂点ドット -->
+            <circle class="radar-dot" id="dot0" cx="0" cy="0" r="5"/>
+            <circle class="radar-dot" id="dot1" cx="0" cy="0" r="5"/>
+            <circle class="radar-dot" id="dot2" cx="0" cy="0" r="5"/>
+            <circle class="radar-dot" id="dot3" cx="0" cy="0" r="5"/>
+            <circle class="radar-dot" id="dot4" cx="0" cy="0" r="5"/>
+            <!-- 軸ラベル -->
+            <text class="radar-label" x="0" y="-115" text-anchor="middle">企画遂行力</text>
+            <text class="radar-label" x="110" y="-33" text-anchor="start">挑戦心</text>
+            <text class="radar-label" x="72" y="103" text-anchor="middle">リスペクト</text>
+            <text class="radar-label" x="-72" y="103" text-anchor="middle">発想力</text>
+            <text class="radar-label" x="-110" y="-33" text-anchor="end">計画性</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- こだわり5要素 -->
+      <div class="approach-values">
+        <div class="approach-value">
+          <span class="val-star">★</span>
+          <span class="val-title">企画遂行力</span>
+          <p class="val-desc">やると決めたことはどんな障害があっても妥協せず遂行します。絶対にやり遂げるという意志が、クオリティの土台です。</p>
+        </div>
+        <div class="approach-value">
+          <span class="val-star">★</span>
+          <span class="val-title">計画性</span>
+          <p class="val-desc">締め切り厳守をモットーに、常に1週間以上の余裕を持って納品。不備がないか確認・ブラッシュアップを欠かしません。</p>
+        </div>
+        <div class="approach-value">
+          <span class="val-star">★</span>
+          <span class="val-title">挑戦心</span>
+          <p class="val-desc">作りたいものに必要なら未経験の技術も進んで習得。Live2D・Unity・LLM活用など、手段を増やすことで表現の幅を広げています。</p>
+        </div>
+        <div class="approach-value">
+          <span class="val-star">★</span>
+          <span class="val-title">発想力</span>
+          <p class="val-desc">連想ゲームや見立てから新しい表現を探究。「主役より引き立てるための画面設計」が発想の原点です。</p>
+        </div>
+        <div class="approach-value">
+          <span class="val-star">★</span>
+          <span class="val-title">リスペクト</span>
+          <p class="val-desc">原作・依頼者・一緒に作る全ての人への敬意を忘れません。自分のために作ってくれた相手には最大限の感謝を返します。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -315,34 +349,6 @@
         </div>
       </div>
 
-      <!-- こだわり5要素 -->
-      <div class="approach-values">
-        <div class="approach-value">
-          <span class="val-star">★</span>
-          <span class="val-title">企画遂行力</span>
-          <p class="val-desc">やると決めたことはどんな障害があっても妥協せず遂行します。絶対にやり遂げるという意志が、クオリティの土台です。</p>
-        </div>
-        <div class="approach-value">
-          <span class="val-star">★</span>
-          <span class="val-title">計画性</span>
-          <p class="val-desc">締め切り厳守をモットーに、常に1週間以上の余裕を持って納品。不備がないか確認・ブラッシュアップを欠かしません。</p>
-        </div>
-        <div class="approach-value">
-          <span class="val-star">★</span>
-          <span class="val-title">挑戦心</span>
-          <p class="val-desc">作りたいものに必要なら未経験の技術も進んで習得。Live2D・Unity・LLM活用など、手段を増やすことで表現の幅を広げています。</p>
-        </div>
-        <div class="approach-value">
-          <span class="val-star">★</span>
-          <span class="val-title">発想力</span>
-          <p class="val-desc">連想ゲームや見立てから新しい表現を探究。「主役より引き立てるための画面設計」が発想の原点です。</p>
-        </div>
-        <div class="approach-value">
-          <span class="val-star">★</span>
-          <span class="val-title">リスペクト</span>
-          <p class="val-desc">原作・依頼者・一緒に作る全ての人への敬意を忘れません。自分のために作ってくれた相手には最大限の感謝を返します。</p>
-        </div>
-      </div>
     </div>
   </section>
 

@@ -977,6 +977,21 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   line-height: 1.75;
   color: var(--muted);
 }
+
+/* STRENGTHS（私のステータス＋こだわり5要素） */
+.strengths {
+  background: #faf9f7;
+  padding: 72px 24px 80px;
+}
+.strengths-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.strengths .approach-values {
+  margin-top: 8px;
+}
+
 .approach-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
