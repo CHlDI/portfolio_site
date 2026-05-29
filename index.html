@@ -360,6 +360,7 @@
         <h2 class="gal-title" id="galTitle"></h2>
         <p class="gal-desc"  id="galDesc"></p>
       </div>
+      <div id="galWorldview"></div>
       <div id="galHighlights"></div>
       <div class="gal-grid" id="galGrid"></div>
       <div class="gal-footer">
@@ -483,8 +484,12 @@
       title: '創作企画主催',
       desc:  'SNS上で主催の執筆する物語の登場人物としてのキャラクターを募集する形の共同創作です。\n人数固定一次創作企画「rebbirthday（りばーすでぃ）」として開催。「白い服を纏う少年少女」という王道な世界観をベースに緻密な伏線を配置し、全ての真実が明かされた際に参加者へ「驚きと快感」を届けるエンターテインメント体験を目指しました。\n過去に自身が参加者として経験した「喜び」や「不満」を分析し、客観的な品質向上のため信頼できる友人を運営に勧誘。チーム化により設定の矛盾や死角が解消され、平均の3倍以上・211件の応募を獲得しました。',
       cover: 'images/39.gif',
+      worldview: {
+        omote: '子どもたちは、学校のような建物の中で穏やかに暮らしています。授業を強制されることはなく、朝礼が終われば、あとはずっと自由時間。校庭で駆け回り、図書室で本を読み、先生に勉強を教わる——そんな毎日。親元に帰りたいと思う子は、誰もいません。',
+        ura: '舞台は、戦争で汚染された近未来。ある秘密組織は、人類を一度滅ぼし、輪廻転生によって世界を最初からやり直す計画を進めていました。感情を増幅させ、人々から理性と命を奪うために操作された世界。学校は組織の施設であり、子どもたちは本来、そのための兵士として育てられるはずでした。しかし、感情を持たないよう作られた教師は、子どもたちと過ごすうちに芽生えた愛から、彼らを守る道を選びます。',
+      },
       highlights: [
-        { num: '01', title: '王道の裏に潜む、二重構造の世界観', body: '「白い服を纏う少年少女」という王道で純粋な見た目の裏に、二重構造の世界観を構築しました。穏やかに見える学校生活の裏に、汚染された未来をリセットしようとする秘密組織の計画を隠し、可愛らしいビジュアルと残酷な真実との落差を演出。随所に仕込んだ緻密な伏線によって、全ての真実が明かされた際に「驚きと快感」を届けることを目指しました。' },
+        { num: '01', title: '王道の美しさと、緻密な伏線による意外性', body: '「白い服を纏う少年少女」という純粋で王道な世界観をベースに、「よく見るやつ」とは一味違う設定を付与し、物語の随所に緻密な伏線を配置しました。全ての真実が明かされた際に、参加者に「驚きと快感」を届けるエンターテインメント体験の創出を目指しました。' },
         { num: '02', title: '参加者目線の追求とチームによる共創', body: '過去に自身が参加者として経験した「喜び」や「不満」を徹底的に分析し、最高のユーザー体験を提供することを運営の至上命題としました。当初は一人で運営していましたが、客観的な品質向上とリスク管理のため、信頼できる友人を運営に勧誘しました。' },
         { num: '03', title: 'チーム体制による成果', body: 'チーム化したことで、自分一人では気づけなかった設定の矛盾や死角が解消されただけでなく、対話を通じて企画への確信が深まったことで、自身の制作パフォーマンスやモチベーションも劇的に向上しました。' },
       ],
@@ -833,6 +838,26 @@
     const proj = PROJECTS[pi];
     galTitle.textContent = proj.title;
     galDesc.innerHTML    = proj.desc.replace(/\n/g,'<br>');
+
+    // 世界観ボックス（表／裏）
+    const galWorldview = document.getElementById('galWorldview');
+    galWorldview.innerHTML = '';
+    if (proj.worldview) {
+      galWorldview.innerHTML =
+        `<div class="gal-world">
+          <div class="gal-world-card gal-world-omote">
+            <span class="gal-world-label">表の世界観</span>
+            <p class="gal-world-body">${proj.worldview.omote}</p>
+          </div>
+          <div class="gal-world-card gal-world-ura">
+            <span class="gal-world-label">裏の世界観</span>
+            <p class="gal-world-body">${proj.worldview.ura}</p>
+          </div>
+        </div>`;
+      galWorldview.style.display = '';
+    } else {
+      galWorldview.style.display = 'none';
+    }
 
     // highlights ボックス
     const galHighlights = document.getElementById('galHighlights');

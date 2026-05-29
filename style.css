@@ -427,6 +427,52 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   #galHighlights { grid-template-columns: 1fr; }
 }
 
+/* 世界観（表／裏） */
+.gal-world {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0 8px;
+}
+.gal-world-card {
+  border-radius: 12px;
+  padding: 22px 22px 20px;
+}
+.gal-world-omote {
+  background: #f7f5f0;
+  border: 1px solid #ece7dd;
+}
+.gal-world-ura {
+  background: #1f1c24;
+}
+.gal-world-label {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 3px 12px;
+  border-radius: 20px;
+}
+.gal-world-omote .gal-world-label {
+  background: #efe9dd;
+  color: #8a7a5c;
+}
+.gal-world-ura .gal-world-label {
+  background: rgba(184,96,112,.22);
+  color: #e6a9b6;
+}
+.gal-world-body {
+  font-size: .8rem;
+  line-height: 1.85;
+  margin: 0;
+}
+.gal-world-omote .gal-world-body { color: #5a5246; }
+.gal-world-ura .gal-world-body { color: #d8d2dc; }
+@media (max-width: 640px) {
+  .gal-world { grid-template-columns: 1fr; }
+}
+
 .gal-footer {
   display: flex;
   justify-content: center;
