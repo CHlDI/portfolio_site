@@ -540,19 +540,19 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   margin: 24px auto 6px;
   padding: 11px 28px;
   width: fit-content;
-  background: #f7f4fa;
+  background: #faf6f7;
   color: #555;
   font-size: .86rem;
   letter-spacing: .02em;
-  border: 1.5px solid #d8cfe8;
+  border: 1.5px solid #e6d2d7;
   border-radius: 8px;
   text-decoration: none;
   transition: background .2s, color .2s, border-color .2s;
 }
 .gal-cta-btn:hover {
-  background: #ede7f6;
+  background: #f4eaed;
   color: #222;
-  border-color: #b8a8d4;
+  border-color: #cda9b3;
 }
 
 /* ── Instagram 確認モーダル ─────────────────── */
@@ -864,7 +864,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
 .axis-label {
   font-size: .72rem;
   letter-spacing: .18em;
-  color: #b08060;
+  color: #b86070;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -1010,7 +1010,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   font-style: italic;
-  color: rgba(176,128,96,.25);
+  color: rgba(184,96,112,.25);
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -1096,7 +1096,7 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
 .val-star {
   display: block;
   font-size: 1rem;
-  color: #b08060;
+  color: #b86070;
   margin-bottom: 8px;
 }
 .val-title {
