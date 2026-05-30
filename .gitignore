@@ -6,6 +6,13 @@ mapping.json
 lbpcascade_animeface.xml
 .claude/
 
+# PDF生成（ポートフォリオPDFのビルド成果物・サイトには含めない）
+build_pdf.js
+portfolio_pdf.html
+portfolio_out.pdf
+pdf_image_list.txt
+pdf_assets/
+
 # OS
 .DS_Store
 Thumbs.db
