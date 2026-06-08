@@ -655,24 +655,37 @@ em { font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font
   margin: 0; aspect-ratio: 1; overflow: hidden;
   cursor: pointer; border-radius: 4px; background: #111;
 }
-.subgal-grid figure img {
-  width: 100%; height: 100%; object-fit: cover;
+.subgal-grid figure img,
+.subgal-grid figure video {
+  width: 100%; height: 100%; object-fit: contain;
   transition: transform .2s;
 }
-.subgal-grid figure:hover img { transform: scale(1.05); }
+.subgal-grid figure:hover img,
+.subgal-grid figure:hover video { transform: scale(1.04); }
+.sg-vid-badge {
+  position: absolute; top: 6px; right: 6px;
+  background: rgba(0,0,0,.55); color: #fff;
+  font-size: .7rem; padding: 2px 6px; border-radius: 3px;
+  pointer-events: none;
+}
+.subgal-grid figure { position: relative; }
 
 /* Sub-gallery lightbox */
 .subgal-lb {
   display: none; position: fixed; inset: 0;
   background: rgba(0,0,0,.95); z-index: 1300;
-  flex-direction: column; align-items: center; justify-content: center;
+  flex-direction: column; align-items: center;
   padding: 56px 64px 16px; box-sizing: border-box; gap: 8px;
 }
 .subgal-lb.open { display: flex; }
-.subgal-lb img, .subgal-lb video {
-  max-width: 100%; max-height: calc(100vh - 190px);
+.subgal-lb-media {
+  flex: 1; min-height: 0;
+  display: flex; align-items: center; justify-content: center;
+  width: 100%;
+}
+.subgal-lb-media img, .subgal-lb-media video {
+  max-width: 100%; max-height: 100%;
   object-fit: contain; border-radius: 4px;
-  flex-shrink: 1; min-height: 0;
 }
 .subgal-lb-x {
   position: fixed; top: 16px; right: 20px;

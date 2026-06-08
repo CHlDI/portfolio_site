@@ -406,8 +406,10 @@
     <button class="subgal-lb-x"    id="subgalLbX"    aria-label="閉じる">✕</button>
     <button class="subgal-lb-prev" id="subgalLbPrev" aria-label="前へ">&#8592;</button>
     <button class="subgal-lb-next" id="subgalLbNext" aria-label="次へ">&#8594;</button>
-    <img id="subgalLbImg" src="" alt="" />
-    <video id="subgalLbVid" src="" controls playsinline style="display:none; max-width:100%; max-height:calc(100vh - 190px); border-radius:4px; flex-shrink:1; min-height:0;"></video>
+    <div class="subgal-lb-media">
+      <img id="subgalLbImg" src="" alt="" />
+      <video id="subgalLbVid" src="" controls playsinline style="display:none;"></video>
+    </div>
     <div class="subgal-lb-counter" id="subgalLbCounter"></div>
     <div class="subgal-lb-caption" id="subgalLbCaption"></div>
   </div>
@@ -1173,10 +1175,22 @@
       subgalGrid.innerHTML = '';
       sgImages.forEach(function (item, i) {
         const src = typeof item === 'string' ? item : item.src;
+        const vid = typeof item === 'string' ? null : (item.video || null);
         const fig = document.createElement('figure');
-        const img = document.createElement('img');
-        img.src = src; img.loading = 'lazy'; img.alt = imgEntry.alt;
-        fig.appendChild(img);
+        if (vid) {
+          const v = document.createElement('video');
+          v.src = vid; v.poster = src; v.muted = true; v.loop = true; v.playsInline = true;
+          fig.addEventListener('mouseenter', function () { v.play().catch(function () {}); });
+          fig.addEventListener('mouseleave', function () { v.pause(); v.currentTime = 0; });
+          fig.appendChild(v);
+          const badge = document.createElement('span');
+          badge.className = 'sg-vid-badge'; badge.textContent = '▶';
+          fig.appendChild(badge);
+        } else {
+          const imgEl = document.createElement('img');
+          imgEl.src = src; imgEl.loading = 'lazy'; imgEl.alt = imgEntry.alt;
+          fig.appendChild(imgEl);
+        }
         fig.addEventListener('click', function () { openSgLb(i); });
         subgalGrid.appendChild(fig);
       });
